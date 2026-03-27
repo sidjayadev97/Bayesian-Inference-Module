@@ -1,0 +1,36 @@
+[build-system]
+# Tells tools like pip how to build your package
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "BayesClassifier"  # Must be unique on PyPI
+version = "0.1.0"
+description = "Bayesian Classification ML for image and tabular data"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+    {name = "Sidarth Jayadev", email = "sidarthjay@gmail.comi"}
+]
+# Categorize your project so others can find it
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "scikit-learn>=1.7.0",
+    "numpy>=1.22.0",
+    "umap-learn>=0.2.0"
+]
+
+[project.optional-dependencies]
+# Dependencies specifically for development/testing
+dev = ["pytest", "black", "ruff"]
+
+[project.urls]
+# Links that will appear on your PyPI project page
+"Homepage" = "https://github.com"
+"Bug Tracker" = "https://github.com/issues"
